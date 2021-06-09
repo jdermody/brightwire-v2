@@ -1,5 +1,11 @@
 <img src="http://www.jackdermody.net/image/bright-wire.png" alt="Bright Wire" style="max-height:144" />
 
+**This is the legacy BrightWire repository for .NET 4.6**
+
+The latest version is https://github.com/jdermody/brightwire
+
+***
+
 Bright Wire is an extensible machine learning library for .NET with GPU support (via CUDA).
 
 ## Getting Started
