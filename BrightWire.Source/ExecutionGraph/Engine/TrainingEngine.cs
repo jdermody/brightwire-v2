@@ -260,19 +260,21 @@ namespace BrightWire.ExecutionGraph.Engine
 			return flag;
 		}
 
-		void _LoadParamaters(Models.ExecutionGraph.Node nodeModel)
+		void _LoadParameters(Models.ExecutionGraph.Node nodeModel)
 		{
 			var node = Start.FindById(nodeModel.Id);
+            if(node == null && !String.IsNullOrEmpty(nodeModel.Name))
+                node = Start.FindByName(nodeModel.Name);
 			node.LoadParameters(nodeModel);
 		}
 
 		public void LoadParametersFrom(Models.ExecutionGraph graph)
 		{
 			if (graph.InputNode != null)
-				_LoadParamaters(graph.InputNode);
+				_LoadParameters(graph.InputNode);
 			if (graph.OtherNodes != null) {
 				foreach (var node in graph.OtherNodes)
-					_LoadParamaters(node);
+					_LoadParameters(node);
 			}
 		}
 	}
