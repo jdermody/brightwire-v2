@@ -5,7 +5,7 @@
     /// </summary>
     class FlowThrough : NodeBase
     {
-        public FlowThrough() : base(null)
+        public FlowThrough(string name = null) : base(name)
         {
         }
 
