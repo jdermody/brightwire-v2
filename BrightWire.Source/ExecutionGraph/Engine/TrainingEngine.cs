@@ -265,7 +265,7 @@ namespace BrightWire.ExecutionGraph.Engine
 			var node = Start.FindById(nodeModel.Id);
             if(node == null && !String.IsNullOrEmpty(nodeModel.Name))
                 node = Start.FindByName(nodeModel.Name);
-			node.LoadParameters(nodeModel);
+			node?.LoadParameters(nodeModel);
 		}
 
 		public void LoadParametersFrom(Models.ExecutionGraph graph)
